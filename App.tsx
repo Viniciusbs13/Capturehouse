@@ -240,35 +240,33 @@ const Hero = () => (
     <div className="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-capture-gold/5 blur-[100px] md:blur-[150px] rounded-full pointer-events-none"></div>
 
     <div className="container mx-auto px-6 md:px-8 relative z-10">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-        <div className="lg:col-span-8 text-left">
-          <RevealOnScroll>
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold tracking-tighter mb-8 md:mb-10 leading-[1.05] text-white">
-              O MARKETING QUE <br />
-              <span className="text-gradient-gold italic pr-2">ESCALA SEU VGV.</span>
-            </h1>
+      <div className="max-w-5xl mx-auto text-left">
+        <RevealOnScroll>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold tracking-tighter mb-8 md:mb-10 leading-[1.05] text-white">
+            O MARKETING QUE <br />
+            <span className="text-gradient-gold italic pr-4">ESCALA SEU VGV.</span>
+          </h1>
 
-            <p className="text-gray-400 text-base md:text-lg max-w-2xl mb-12 font-light leading-relaxed">
-              Chega de métricas de vaidade. Implemente a estratégia de dados, branding e tráfego feita para vender imóveis de alto padrão.
-            </p>
+          <p className="text-gray-400 text-base md:text-lg max-w-2xl mb-12 font-light leading-relaxed">
+            Chega de métricas de vaidade. Implemente a estratégia de dados, branding e tráfego feita para vender imóveis de alto padrão.
+          </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <button 
-                onClick={() => document.getElementById('contato')?.scrollIntoView({behavior: 'smooth'})}
-                className="w-full sm:w-auto px-10 py-5 bg-capture-gold hover:bg-[#D4AF37] text-black font-bold rounded-sm text-sm uppercase tracking-wider transition-all duration-300 interactive shadow-lg hover:shadow-capture-gold/20"
-              >
-                Quero Escalar meu Negócio
-              </button>
-              <button 
-                 onClick={() => document.getElementById('solucoes')?.scrollIntoView({behavior: 'smooth'})}
-                className="w-full sm:w-auto px-10 py-5 bg-transparent hover:bg-white/5 text-white border border-white/10 hover:border-capture-gold rounded-sm font-bold text-sm uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-4 group interactive"
-              >
-                <span>Conhecer Consultoria</span>
-                <span className="group-hover:translate-x-1 transition-transform text-capture-red">→</span>
-              </button>
-            </div>
-          </RevealOnScroll>
-        </div>
+          <div className="flex flex-col sm:flex-row gap-6 items-start">
+            <button 
+              onClick={() => document.getElementById('contato')?.scrollIntoView({behavior: 'smooth'})}
+              className="w-full sm:w-auto px-10 py-5 bg-capture-gold hover:bg-[#D4AF37] text-black font-bold rounded-sm text-sm uppercase tracking-wider transition-all duration-300 interactive shadow-lg hover:shadow-capture-gold/20"
+            >
+              Quero Escalar meu Negócio
+            </button>
+            <button 
+                onClick={() => document.getElementById('solucoes')?.scrollIntoView({behavior: 'smooth'})}
+              className="w-full sm:w-auto px-10 py-5 bg-transparent hover:bg-white/5 text-white border border-white/10 hover:border-capture-gold rounded-sm font-bold text-sm uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-4 group interactive"
+            >
+              <span>Conhecer Consultoria</span>
+              <span className="group-hover:translate-x-1 transition-transform text-capture-red">→</span>
+            </button>
+          </div>
+        </RevealOnScroll>
       </div>
     </div>
   </section>
@@ -596,7 +594,7 @@ const Team = () => (
         </RevealOnScroll>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
         <TeamCard 
           index={0}
           name="Gustavo"
@@ -614,6 +612,12 @@ const Team = () => (
           name="Mateus"
           role="CSO • Chief Strategy Officer"
           image="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80"
+        />
+        <TeamCard 
+          index={3}
+          name="William"
+          role="Sócio Investidor"
+          image="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80"
         />
       </div>
     </div>
