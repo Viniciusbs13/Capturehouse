@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 
 // --- Interactive Utilities ---
@@ -446,7 +447,6 @@ const Portfolio = () => (
         </RevealOnScroll>
       </div>
 
-      {/* Altered grid to 2 columns to accommodate 4 items and look more cinematic */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
         <PropertyCard 
           index={0}
@@ -472,7 +472,6 @@ const Portfolio = () => (
           tag="Lançamento"
           price="R$ 22.000.000"
         />
-        {/* Added 4th Item */}
         <PropertyCard 
           index={3}
           image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80"
@@ -483,7 +482,6 @@ const Portfolio = () => (
         />
       </div>
 
-      {/* New Button to View Full Portfolio */}
       <RevealOnScroll delay={300}>
         <div className="mt-20 flex justify-center">
             <a 
@@ -509,7 +507,6 @@ const Portfolio = () => (
 
 const Statistic = ({ value, label }: { value: string, label: string }) => (
   <div className="relative aspect-video md:aspect-square flex flex-col justify-center items-center bg-[#050505] hover:bg-[#0a0a0a] transition-all duration-500 group p-10 md:p-12 text-center">
-    {/* Hover Gradient */}
     <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
     
     <h3 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-4 group-hover:scale-110 transition-transform duration-500 tracking-tighter">{value}</h3>
@@ -542,7 +539,6 @@ const Partners = () => (
          {["Sotheby's", "RE/MAX Select", "Keller Williams", "Lopes Elite", "Coelho da Fonseca", "Bossa Nova", "Vanguard", "Porto Cervo"].map((partner, i) => (
             <span key={i} className="text-xl md:text-2xl font-display font-bold text-white uppercase tracking-wider">{partner}</span>
          ))}
-         {/* Duplicate for infinite loop illusion */}
          {["Sotheby's", "RE/MAX Select", "Keller Williams", "Lopes Elite", "Coelho da Fonseca", "Bossa Nova", "Vanguard", "Porto Cervo"].map((partner, i) => (
             <span key={`dup-${i}`} className="text-xl md:text-2xl font-display font-bold text-white uppercase tracking-wider">{partner}</span>
          ))}
@@ -554,17 +550,12 @@ const Partners = () => (
 const TeamCard = ({ name, role, image, index }: { name: string; role: string; image: string; index: number }) => (
   <RevealOnScroll delay={index * 100}>
     <div className="group relative h-[450px] md:h-[550px] overflow-hidden border border-white/5 bg-[#0a0a0a] interactive">
-      {/* Image */}
       <img 
         src={image} 
         alt={name}
         className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
       />
-      
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-500"></div>
-      
-      {/* Content */}
       <div className="absolute bottom-0 left-0 w-full p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
         <div className="mb-4 overflow-hidden h-6 flex items-end">
            <p className="text-capture-gold text-xs font-bold uppercase tracking-[0.2em] mb-1 translate-y-[150%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-75">
@@ -594,30 +585,24 @@ const Team = () => (
         </RevealOnScroll>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
         <TeamCard 
           index={0}
-          name="Gustavo"
-          role="CEO • Chief Executive Officer"
-          image="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80"
-        />
-        <TeamCard 
-          index={1}
           name="Vinicius"
           role="CMO • Chief Marketing Officer"
           image="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80"
+        />
+        <TeamCard 
+          index={1}
+          name="Gustavo"
+          role="CEO • Chief Executive Officer"
+          image="https://drive.google.com/uc?export=view&id=1a6xrRZPqD3tQp4fdfbdTwAyswP_5UMTU"
         />
         <TeamCard 
           index={2}
           name="Mateus"
           role="CSO • Chief Strategy Officer"
           image="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80"
-        />
-        <TeamCard 
-          index={3}
-          name="William"
-          role="Sócio Investidor"
-          image="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80"
         />
       </div>
     </div>
@@ -703,7 +688,6 @@ const Feedbacks = () => (
 
 const Methodology = () => (
   <section className="py-24 md:py-40 bg-[#050505] relative border-t border-white/5">
-    {/* Architectural Background Lines */}
     <div className="absolute inset-0 opacity-10 pointer-events-none" 
          style={{ backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }}>
     </div>
@@ -711,8 +695,6 @@ const Methodology = () => (
     <div className="container mx-auto px-6 md:px-8 relative z-10">
       <RevealOnScroll>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start lg:items-center mb-20 md:mb-32">
-          
-          {/* Awareness Copy */}
           <div>
             <div className="inline-block bg-capture-gold/10 px-4 py-2 rounded-sm border border-capture-gold/30 mb-8">
               <span className="text-capture-gold text-xs font-bold uppercase tracking-widest">A Verdade Sobre Vendas</span>
@@ -747,10 +729,8 @@ const Methodology = () => (
             </button>
           </div>
 
-          {/* Process Visual */}
           <div className="relative mt-12 lg:mt-0">
             <div className="absolute left-8 top-0 bottom-0 w-px bg-white/10"></div>
-            
             <div className="space-y-16">
               {[
                 { step: "01", title: "Diagnóstico Profundo", desc: "Analisamos onde você está perdendo dinheiro hoje." },
@@ -767,11 +747,9 @@ const Methodology = () => (
               ))}
             </div>
           </div>
-
         </div>
       </RevealOnScroll>
 
-      {/* NEW: Ecosystem Deliverables */}
       <RevealOnScroll delay={200}>
         <div className="border-t border-white/10 pt-16 md:pt-24">
             <div className="text-center mb-12 md:mb-16">
